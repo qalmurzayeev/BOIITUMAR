@@ -1,48 +1,29 @@
 import { Link } from 'react-router';
-import { ArrowRight, CheckCircle, Award, Users, Factory } from 'lucide-react';
+import { ArrowRight, Award, Users, Factory } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { products } from '../data/productsData';
-import { newsItems } from '../data/newsData';
 
 export function Home() {
   const { t, language } = useLanguage();
 
   const featuredProducts = products.filter((p) => p.featured).slice(0, 8);
-  const latestNews = newsItems.slice(0, 3);
-
-  const solutions = [
-    {
-      titleKk: t.waterSupply,
-      descKk: t.waterSupplyDesc,
-      icon: '💧',
-      image: 'https://images.unsplash.com/photo-1759668987649-a2057d0a9f35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHN1cHBseSUyMHBpcGVsaW5lJTIwc3lzdGVtfGVufDF8fHx8MTc3NjQwOTcyOXww&ixlib=rb-4.1.0&q=80&w=1080',
-      link: '/solutions/water-supply',
-    },
-    {
-      titleKk: t.fireSafety,
-      descKk: t.fireSafetyDesc,
-      icon: '🔥',
-      image: 'https://images.unsplash.com/photo-1763517890788-e43774e38ed4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJlJTIwc3ByaW5rbGVyJTIwc3lzdGVtJTIwYnVpbGRpbmd8ZW58MXx8fHwxNzc2NDA5NzI5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      link: '/solutions/fire-protection',
-    },
-    {
-      titleKk: t.oilGas,
-      descKk: t.oilGasDesc,
-      icon: '⚙️',
-      image: 'https://images.unsplash.com/photo-1704839710877-70f6e8cd69a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjBnYXMlMjBpbmR1c3RyeSUyMHBpcGVsaW5lfGVufDF8fHx8MTc3NjQwOTczMHww&ixlib=rb-4.1.0&q=80&w=1080',
-      link: '/solutions/oil-gas',
-    },
-  ];
 
   const certificates = [
-    'UL/FM',
-    'API 6D',
-    'ISO 9001',
-    'ANSI B16',
-    'EN 558',
-    'BS 5153',
-    'CE',
-    'WRAS',
+    'ГОСТ 5762-2002',
+    'ГОСТ 9544-2015',
+    'ГОСТ 12.2.063-2015',
+    'ГОСТ 33257-2015',
+    'ГОСТ 33259-2015',
+    'ГОСТ 12815-80',
+    'ГОСТ 12820-80',
+    'ГОСТ 12821-80',
+    'ГОСТ 13547-2015',
+    'ГОСТ 356-80',
+    'ГОСТ 15150-69',
+    'ГОСТ 9544-93',
+    'ГОСТ 24054-80',
+    'ГОСТ 4666-2015',
+    'ГОСТ 2.601',
   ];
 
   const stats = [
@@ -54,14 +35,14 @@ export function Home() {
       icon: Award,
     },
     {
-      number: '1000+',
+      number: '250+',
       labelKk: 'Клиенттер',
       labelEn: 'Customers',
       labelRu: 'Клиентов',
       icon: Users,
     },
     {
-      number: '25+',
+      number: '10+',
       labelKk: 'Елдер',
       labelEn: 'Countries',
       labelRu: 'Стран',
@@ -129,46 +110,12 @@ export function Home() {
               <h2 className="text-3xl md:text-4xl text-blue-900 mb-6">{t.aboutTitle}</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 {language === 'kk' &&
-                  '«Boitumar» ЖШС — өнеркәсіптік кәсіпорындар үшін тиек арматурасын жеткізуге маманданған, қарқынды дамып келе жатқан компания. 5 жылдан астам уақыт бойы біз нарықта табысты жұмыс істеп, мұнай-газ, химия және өнеркәсіптің басқа да салалары үшін сапалы өнімдерді жеткізіп келеміз. Осы уақыт ішінде компания айтарлықтай практикалық тәжірибе жинақтап, өндірушілермен сенімді серіктестік қарым-қатынас орнатты және клиенттердің сеніміне ие болды.'}
+                  '«Boitumar» ЖШС — өнеркәсіптік кәсіпорындар үшін тиек арматурасын жеткізуге маманданған, қарқынды дамып келе жатқан компания. 5 жылдан астам уақыт бойы біз нарықта табысты жұмыс істеп, мұнай-газ, химия және өнеркәсіптің басқа да салалары үшін сапалы өнімдерді жеткізіп келеміз.'}
                 {language === 'en' &&
-                  'Boitumar LLP is a dynamically developing company specializing in the supply of valves and fittings for industrial enterprises.   For more than 5 years, we have been successfully operating in the market, providing high-quality products for the oil and gas, chemical, and other industries. During this time, the company has accumulated significant practical experience, built reliable partnerships with manufacturers, and earned the trust of its clients.'}
+                  'Boitumar LLP is a dynamically developing company specializing in the supply of valves and fittings for industrial enterprises. For more than 5 years, we have been successfully operating in the market, providing high-quality products for the oil and gas, chemical, and other industries.'}
                 {language === 'ru' &&
-                  'ТОО “Boitumar” — динамично развивающаяся компания, специализирующаяся на поставках запорной арматуры для промышленных предприятий. На протяжении более 5 лет мы успешно работаем на рынке и поставляем качественную продукцию для нефтегазовой, химической и других отраслей промышленности. За это время компания накопила значительный практический опыт, выстроила надежные партнерские отношения с производителями и заслужила доверие клиентов.'}
+                  'ТОО "Boitumar" — динамично развивающаяся компания, специализирующаяся на поставках запорной арматуры для промышленных предприятий. На протяжении более 5 лет мы успешно работаем на рынке и поставляем качественную продукцию для нефтегазовой, химической и других отраслей промышленности. За это время компания накопила значительный практический опыт, выстроила надежные партнерские отношения с производителями и заслужила доверие клиентов.'}
               </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="size-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">
-                    {language === 'kk' && 'UL/FM, API, ISO сертификаттары'}
-                    {language === 'en' && 'UL/FM, API, ISO certifications'}
-                    {language === 'ru' && 'Сертификаты UL/FM, API, ISO'}
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="size-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">
-                    {language === 'kk' && '50+ елге экспорт'}
-                    {language === 'en' && 'Export to 50+ countries'}
-                    {language === 'ru' && 'Экспорт в 50+ стран'}
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="size-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">
-                    {language === 'kk' && 'Заманауи өндіріс орны'}
-                    {language === 'en' && 'Modern production facility'}
-                    {language === 'ru' && 'Современное производство'}
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="size-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">
-                    {language === 'kk' && 'Қатаң сапа бақылауы'}
-                    {language === 'en' && 'Strict quality control'}
-                    {language === 'ru' && 'Строгий контроль качества'}
-                  </span>
-                </li>
-              </ul>
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
@@ -179,12 +126,22 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1767281075989-7571356d477e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwcHJvZHVjdGlvbiUyMGxpbmUlMjBhdXRvbWF0aW9ufGVufDF8fHx8MTc3NjQwOTcyOHww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/10.png"
                 alt="Factory"
                 className="rounded-lg shadow-lg w-full h-48 object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1748255882537-cbe88b145305?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFsaXR5JTIwY29udHJvbCUyMGluc3BlY3Rpb24lMjBpbmR1c3RyaWFsfGVufDF8fHx8MTc3NjM1Njc5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/11.png"
+                alt="Factory"
+                className="rounded-lg shadow-lg w-full h-48 object-cover"
+              />
+              <img
+                src="/2.png"
+                alt="Quality Control"
+                className="rounded-lg shadow-lg w-full h-48 object-cover mt-8"
+              />
+              <img
+                src="/12.png"
                 alt="Quality Control"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mt-8"
               />
@@ -216,21 +173,13 @@ export function Home() {
                 </div>
                 <div className="p-4">
                   <div className="text-xs text-blue-600 mb-2">
-                    {language === 'kk'
-                      ? product.categoryKk
-                      : language === 'en'
-                      ? product.categoryEn
-                      : product.categoryRu}
+                    {language === 'kk' ? product.categoryKk : language === 'en' ? product.categoryEn : product.categoryRu}
                   </div>
                   <h3 className="text-gray-900 mb-2">
                     {language === 'kk' ? product.nameKk : language === 'en' ? product.nameEn : product.nameRu}
                   </h3>
                   <p className="text-sm text-gray-600 line-clamp-2">
-                    {language === 'kk'
-                      ? product.descriptionKk
-                      : language === 'en'
-                      ? product.descriptionEn
-                      : product.descriptionRu}
+                    {language === 'kk' ? product.descriptionKk : language === 'en' ? product.descriptionEn : product.descriptionRu}
                   </p>
                 </div>
               </Link>
@@ -248,8 +197,6 @@ export function Home() {
         </div>
       </section>
 
-      
-
       {/* Certificates Section */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
@@ -257,20 +204,18 @@ export function Home() {
             <h2 className="text-3xl md:text-4xl text-blue-900 mb-4">{t.certificates}</h2>
             <p className="text-gray-600">{t.certificatesDesc}</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {certificates.map((cert, idx) => (
               <div
                 key={idx}
                 className="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
               >
-                <span className="text-blue-900 text-center">{cert}</span>
+                <span className="text-blue-900 text-center text-sm">{cert}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
