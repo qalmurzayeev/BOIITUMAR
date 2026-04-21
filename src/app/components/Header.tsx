@@ -38,27 +38,7 @@ const navLinks = [
                 <span>tooboitumar@gmail.com</span>
               </a>
             </div>
-            <div className="flex items-center gap-2">
-              <Globe className="size-3" />
-              <button
-                onClick={() => setLanguage('kk')}
-                className={`px-2 py-1 rounded ${language === 'kk' ? 'bg-blue-700' : 'hover:bg-blue-800'}`}
-              >
-                ҚАЗ
-              </button>
-              <button
-                onClick={() => setLanguage('en')}
-                className={`px-2 py-1 rounded ${language === 'en' ? 'bg-blue-700' : 'hover:bg-blue-800'}`}
-              >
-                ENG
-              </button>
-              <button
-                onClick={() => setLanguage('ru')}
-                className={`px-2 py-1 rounded ${language === 'ru' ? 'bg-blue-700' : 'hover:bg-blue-800'}`}
-              >
-                РУС
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>
