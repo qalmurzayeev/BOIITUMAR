@@ -1,56 +1,8 @@
-import { Award, Users, Factory, Target, Eye, Heart } from 'lucide-react';
+import { Factory } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export function About() {
   const { t, language } = useLanguage();
-
-  const timeline = [
-    { year: '2017', eventKk: 'Компания құрылды', eventEn: 'Company founded', eventRu: 'Основание компании' },
-    { year: '2018', eventKk: 'ISO 9001 сертификаты', eventEn: 'ISO 9001 certification', eventRu: 'Сертификация ISO 9001' },
-    { year: '2020', eventKk: 'UL/FM сертификаттары', eventEn: 'UL/FM certifications', eventRu: 'Сертификаты UL/FM' },
-    { year: '2022', eventKk: 'API сертификация', eventEn: 'API certification', eventRu: 'Сертификация API' },
-    { year: '2024', eventKk: 'Өндірісті кеңейту', eventEn: 'Factory expansion', eventRu: 'Расширение производства' },
-    { year: '2026', eventKk: '50+ елге экспорт', eventEn: 'Export to 50+ countries', eventRu: 'Экспорт в 50+ стран' },
-  ];
-
-  const values = [
-    {
-      icon: Award,
-      titleKk: 'Сапа',
-      titleEn: 'Quality',
-      titleRu: 'Качество',
-      descKk: 'Біз әрқашан ең жоғары сапа стандарттарына ұмтыламыз',
-      descEn: 'We always strive for the highest quality standards',
-      descRu: 'Мы всегда стремимся к высочайшим стандартам качества',
-    },
-    {
-      icon: Users,
-      titleKk: 'Клиент бағдарлылық',
-      titleEn: 'Customer Focus',
-      titleRu: 'Ориентация на клиента',
-      descKk: 'Клиенттеріміздің қанағаттануы біздің басты мақсатымыз',
-      descEn: 'Customer satisfaction is our primary goal',
-      descRu: 'Удовлетворенность клиентов — наша главная цель',
-    },
-    {
-      icon: Factory,
-      titleKk: 'Инновация',
-      titleEn: 'Innovation',
-      titleRu: 'Инновации',
-      descKk: 'Үнемі жаңа технологияларды қолданамыз',
-      descEn: 'We continuously apply new technologies',
-      descRu: 'Мы постоянно применяем новые технологии',
-    },
-    {
-      icon: Heart,
-      titleKk: 'Жауапкершілік',
-      titleEn: 'Responsibility',
-      titleRu: 'Ответственность',
-      descKk: 'Қоршаған ортаға және қоғамға жауапкершілікпен қарайтын',
-      descEn: 'Responsible approach to environment and society',
-      descRu: 'Ответственный подход к окружающей среде и обществу',
-    },
-  ];
 
   return (
     <div>
@@ -73,11 +25,11 @@ export function About() {
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               {language === 'kk' &&
-                'TOO BOITUMAR Қытайдың  провинциясында орналасқан су клапандары, трубопровод арматурасы және центробежді насостарды өндірумен айналысатын жетекші компания. Біз 2017 жылы құрылғаннан бері халықаралық нарықта беделді орын алдық.'}
+                'TOO BOITUMAR Қытайдың провинциясында орналасқан су клапандары, трубопровод арматурасы және центробежді насостарды өндірумен айналысатын жетекші компания. Біз 2017 жылы құрылғаннан бері халықаралық нарықта беделді орын алдық.'}
               {language === 'en' &&
                 'TOO BOITUMAR is a leading company located in Hebei Province, China, specializing in the production of water valves, pipe fittings, and centrifugal pumps. Since our establishment in 2017, we have earned a reputable position in the international market.'}
               {language === 'ru' &&
-                'ТОО “Boitumar” — динамично развивающаяся компания, специализирующаяся на поставках запорной арматуры для промышленных предприятий. На протяжении более 5 лет мы успешно работаем на рынке и поставляем качественную продукцию для нефтегазовой, химической и других отраслей промышленности. За это время компания накопила значительный практический опыт, выстроила надежные партнерские отношения с производителями и заслужила доверие клиентов. С 2025 года компания вышла на новый этап развития — запущено собственное производство запорной арматуры. Наш производственный цех расположен в г. Шымкент, в индустриальной зоне “Standart”, что позволяет нам обеспечивать полный контроль качества продукции, гибкость в производстве и оперативные сроки поставки.'}
+                'ТОО "Boitumar" — динамично развивающаяся компания, специализирующаяся на поставках запорной арматуры для промышленных предприятий. На протяжении более 5 лет мы успешно работаем на рынке и поставляем качественную продукцию для нефтегазовой, химической и других отраслей промышленности. За это время компания накопила значительный практический опыт, выстроила надежные партнерские отношения с производителями и заслужила доверие клиентов. С 2025 года компания вышла на новый этап развития — запущено собственное производство запорной арматуры. Наш производственный цех расположен в г. Шымкент, в индустриальной зоне "Standart", что позволяет нам обеспечивать полный контроль качества продукции, гибкость в производстве и оперативные сроки поставки.'}
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               {language === 'kk' &&
@@ -87,95 +39,6 @@ export function About() {
               {language === 'ru' &&
                 'Наши преимущества: Более 5 лет опыта в сфере поставок запорной арматуры. Собственное производство в г. Шымкент Контроль качества на всех этапах. Индивидуальный подход к каждому клиенту. Надежные партнерские связи с международными производителями. Мы ориентированы на долгосрочное сотрудничество и стремимся предлагать нашим клиентам эффективные и надежные решения.'}
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission, Vision, Values */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <Target className="size-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl text-blue-900 mb-4">{t.ourMission}</h3>
-              <p className="text-gray-700">
-                {language === 'kk' &&
-                  'Ең жоғары сапалы өнімдер мен қызметтерді ұсыну арқылы клиенттеріміздің табысына үлес қосу.'}
-                {language === 'en' &&
-                  'Contributing to the success of our customers by providing the highest quality products and services.'}
-                {language === 'ru' &&
-                  'Содействовать успеху наших клиентов, предоставляя продукцию и услуги высочайшего качества.'}
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <Eye className="size-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl text-blue-900 mb-4">{t.ourVision}</h3>
-              <p className="text-gray-700">
-                {language === 'kk' &&
-                  'Өнеркәсіптік клапандар мен насостар саласында әлемдік көшбасшы болу.'}
-                {language === 'en' &&
-                  'To become a global leader in the industrial valves and pumps sector.'}
-                {language === 'ru' &&
-                  'Стать мировым лидером в области промышленных клапанов и насосов.'}
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <Heart className="size-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl text-blue-900 mb-4">{t.ourValues}</h3>
-              <p className="text-gray-700">
-                {language === 'kk' &&
-                  'Сапа, жауапкершілік, инновация және клиентке қызмет ету — біздің негізгі құндылықтарымыз.'}
-                {language === 'en' &&
-                  'Quality, responsibility, innovation, and customer service are our core values.'}
-                {language === 'ru' &&
-                  'Качество, ответственность, инновации и обслуживание клиентов — наши основные ценности.'}
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <value.icon className="size-10 text-blue-600 mx-auto mb-4" />
-                <h4 className="text-lg text-blue-900 mb-2">
-                  {language === 'kk' ? value.titleKk : language === 'en' ? value.titleEn : value.titleRu}
-                </h4>
-                <p className="text-sm text-gray-600">
-                  {language === 'kk' ? value.descKk : language === 'en' ? value.descEn : value.descRu}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl text-blue-900 mb-4">
-              {language === 'kk' && 'Біздің тарихымыз'}
-              {language === 'en' && 'Our History'}
-              {language === 'ru' && 'Наша история'}
-            </h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {timeline.map((item, idx) => (
-                <div key={idx} className="flex gap-6 items-start">
-                  <div className="flex-shrink-0 w-20">
-                    <div className="bg-blue-600 text-white px-4 py-2 rounded text-center">{item.year}</div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <p className="text-gray-700">
-                        {language === 'kk' ? item.eventKk : language === 'en' ? item.eventEn : item.eventRu}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -194,11 +57,7 @@ export function About() {
                 {language === 'ru' &&
                   'Наш современный производственный завод занимает площадь более 1 000 квадратных метров. Используются автоматизированные производственные линии и передовые технологии.'}
               </p>
-              <img
-                src="/1.png"
-                alt="Factory"
-                className="rounded-lg shadow-lg w-full"
-              />
+              <img src="/1.png" alt="Factory" className="rounded-lg shadow-lg w-full" />
             </div>
             <div>
               <h2 className="text-3xl text-blue-900 mb-6">{t.qualityControl}</h2>
@@ -210,11 +69,7 @@ export function About() {
                 {language === 'ru' &&
                   'Мы уделяем особое внимание качеству каждого продукта. Применяются строгие процессы контроля качества и тестирования. Каждый продукт проверяется на соответствие международным стандартам.'}
               </p>
-              <img
-                src="/5.png"
-                alt="Quality Control"
-                className="rounded-lg shadow-lg w-full"
-              />
+              <img src="/5.png" alt="Quality Control" className="rounded-lg shadow-lg w-full" />
             </div>
           </div>
 
@@ -230,12 +85,10 @@ export function About() {
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <img
-  src="/team.png"
-  alt="Team"
-  className="rounded-lg shadow-lg w-full h-64 object-cover object-center"
-/>
-              
-              
+                src="/team.png"
+                alt="Team"
+                className="rounded-lg shadow-lg w-full h-64 object-cover object-center"
+              />
             </div>
           </div>
         </div>
